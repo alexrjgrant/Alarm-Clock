@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:focusableInTouchMode="true">
+
+    <View
+            android:id="@+id/divider4"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnVib" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbThu" android:checked="false"
+            android:textOff="T" android:textOn="T"
+            app:layout_constraintStart_toEndOf="@+id/tbWed"
+            app:layout_constraintEnd_toStartOf="@+id/tbFri" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider7"/>
+    <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbFri" android:checked="false"
+            android:textOff="F" android:textOn="F"
+            app:layout_constraintEnd_toStartOf="@+id/tbSat"
+            app:layout_constraintStart_toEndOf="@+id/tbThu" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider7"/>
+    <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbSat" android:checked="false"
+            android:textOff="S" android:textOn="S"
+            app:layout_constraintStart_toEndOf="@+id/tbFri"
+            app:layout_constraintEnd_toStartOf="@+id/tbSun" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider7"/>
+    <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbWed" android:checked="false"
+            android:textOff="W" android:textOn="W"
+            app:layout_constraintStart_toEndOf="@+id/tbTue"
+            android:layout_marginStart="2dp" app:layout_constraintEnd_toStartOf="@+id/tbThu"
+            android:layout_marginTop="64dp" app:layout_constraintTop_toBottomOf="@+id/divider7"/>
+    <TextView
+            android:text="Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDate" android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/divider5"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:id="@+id/tvPickedDate" android:text="Select a Date"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/tvDate"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:id="@+id/tvPickedTime" android:text="Select a Time"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/tvTime"/>
+    <TextView
+            android:text="Repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRepeat" android:textSize="24sp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/divider7"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/tbMon"/>
+
+    <RadioButton
+            android:text="Once"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/rbOnce" android:layout_weight="1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/rbRep" android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="120dp"
+            android:layout_marginTop="48dp" app:layout_constraintTop_toBottomOf="@+id/etName"/>
+    <RadioButton
+            android:text="Repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/rbRep" android:layout_weight="1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/rbOnce"
+            android:layout_marginStart="15dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="120dp" android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/etName"/>
+    <TextView
+            android:text="Alarm Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName" android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"/>
+    <TextView
+            android:text="Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMode" android:textSize="24sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/etName" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTime" android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+    <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbMon" android:checked="false"
+            android:textOff="M" android:textOn="M"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepeat" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp" app:layout_constraintEnd_toStartOf="@+id/tbTue"/>
+    <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbSun" android:checked="false"
+            android:textOff="S" android:textOn="S"
+            app:layout_constraintStart_toEndOf="@+id/tbSat"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="28dp" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider7"/>
+    <ToggleButton
+            android:text="T"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbTue" android:checked="false"
+            android:textOff="T" android:textOn="T"
+            app:layout_constraintStart_toEndOf="@+id/tbMon" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepeat" app:layout_constraintEnd_toStartOf="@+id/tbWed"
+            android:layout_marginEnd="2dp"/>
+    <android.support.constraint.Group android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                      android:id="@+id/group"/>
+    <Switch
+            android:text="Vibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnVib" android:textOn="Vibrate"
+            android:textOff="Vibrate" android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" android:switchPadding="20dp"/>
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/rbOnce" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/tvTime"/>
+    <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tbThu" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <View
+            android:id="@+id/divider5"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectTime" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvDate" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <View
+            android:id="@+id/divider7"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectDate" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="Select"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnSelectDate"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/divider5" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="180dp"/>
+    <Button
+            android:text="Select"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnSelectTime"
+            android:layout_marginTop="50dp" app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="180dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:src="@mipmap/adpp"/>
+</android.support.constraint.ConstraintLayout>
